@@ -35,7 +35,7 @@ public enum States {
 	SERGIPE("Sergipe", "SE", "Aracaju"),
 	DISTRITO_FEDERAL("Distrito Federal", "DF", "Brasília");
 
-	private String name;
-	private String abr;
-	private String capital;
+	private final String name;
+	private final String abr;
+	private final String capital;
 }

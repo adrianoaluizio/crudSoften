@@ -1,8 +1,9 @@
 package br.com.soften.crud.services;
 
 import br.com.soften.crud.models.entities.Client;
-import br.com.soften.crud.models.repositories.ClientRepository;
+import br.com.soften.crud.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +13,13 @@ public class ClientService {
 	@Autowired
 	private ClientRepository clientRepository;
 
+	@Value("${service.name}")
+	private String name;
+
 	public Client save(Client client){
+		if(client.getName() == null){
+			client.setName(name);
+		}
 		return clientRepository.save(client);
 	}
 

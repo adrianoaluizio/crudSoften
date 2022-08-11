@@ -1,4 +1,4 @@
-package br.com.soften.crud.models.repositories;
+package br.com.soften.crud.repositories;
 
 import br.com.soften.crud.models.entities.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
